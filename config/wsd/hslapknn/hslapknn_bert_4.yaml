@@ -1,0 +1,15 @@
+meta_learner: hslapknn
+vectors: bert
+num_shots:
+  wsd: 4
+num_updates: 5
+num_test_samples:
+  wsd: 4
+num_train_episodes:
+  wsd: 0
+num_val_episodes:
+  wsd: 166
+num_test_episodes:
+  wsd: 270
+device: cpu
+write_directory: hslapknn_data/bert_4

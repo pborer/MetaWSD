@@ -15,6 +15,7 @@ from models.majority_classifier import MajorityClassifier
 from models.maml import MAML
 from models.nearest_neighbor import NearestNeighborClassifier
 from models.proto_network import PrototypicalNetwork
+from models.hslapknn import HslapknnDataWriter
 
 
 logger = logging.getLogger('MetaLearningLog')
@@ -99,6 +100,8 @@ if __name__ == '__main__':
         meta_learner = MajorityClassifier()
     elif config['meta_learner'] == 'nearest_neighbor':
         meta_learner = NearestNeighborClassifier(config)
+    elif config['meta_learner'] == 'hslapknn':
+        meta_learner = HslapknnDataWriter(config)
     else:
         raise NotImplementedError
 

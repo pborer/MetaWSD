@@ -28,7 +28,7 @@ class SemCorWSDDataset(data.Dataset):
         sentences = []
         lemmatized_sentences = []
         labels = []
-        for file_name in os.listdir(self.data_path):
+        for file_name in sorted(os.listdir(self.data_path), key=str.lower):
             if file_name.endswith('.xml'):
                 sent = []
                 lem_sent = []

@@ -1,0 +1,15 @@
+meta_learner: hslapknn
+vectors: elmo
+num_shots:
+  wsd: 8
+num_updates: 5
+num_test_samples:
+  wsd: 8
+num_train_episodes:
+  wsd: 0
+num_val_episodes:
+  wsd: 167
+num_test_episodes:
+  wsd: 264
+device: cpu
+write_directory: hslapknn_data/elmo_8

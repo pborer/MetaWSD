@@ -76,7 +76,7 @@ def generate_semcor_wsd_episodes(wsd_dataset, n_episodes, n_support_examples, n_
 
 def generate_wsd_episodes(dir, n_episodes, n_support_examples, n_query_examples, task, meta_train=True):
     episodes = []
-    for file_name in glob.glob(os.path.join(dir, '*.json')):
+    for file_name in sorted(glob.glob(os.path.join(dir, '*.json'))):
         if len(episodes) == n_episodes:
             break
         word = file_name.split(os.sep)[-1].split('.')[0]
